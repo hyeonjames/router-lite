@@ -9,14 +9,14 @@ it doesn't listen any event
 
 using Npm
 -----------
-npm install router-lite
+    npm install router-lite
 -----------
 
 using browser
 ----------
 Download
-https://raw.githubusercontent.com/tmdgus0118/router-lite/master/dist/router-lite.js
-https://raw.githubusercontent.com/tmdgus0118/router-lite/master/dist/router-lite.min.js
+    https://raw.githubusercontent.com/tmdgus0118/router-lite/master/dist/router-lite.js
+    https://raw.githubusercontent.com/tmdgus0118/router-lite/master/dist/router-lite.min.js
 
 ----------
 
