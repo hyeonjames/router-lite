@@ -1,6 +1,6 @@
 {
   "name": "router-lite",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "simplified route resolver",
   "main": "src/index.js",
   "scripts": {

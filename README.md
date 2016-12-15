@@ -26,7 +26,7 @@ In node.js or using browserify
 -----------
     const routerLite = require('router-lite')
     const router = new routerLite();
-    router.on('/test/:parameter/:optional', function (params) {
+    router.on('/test/:parameter/:optional?', function (params) {
         console.log(params); 
     });
     router.otherwise(function (){
@@ -40,7 +40,7 @@ In node.js or using browserify
 In browser
 -----------
     var router = new routerLite();
-    router.on('/test/:parameter/:optional', function (params) {
+    router.on('/test/:parameter/:optional?', function (params) {
         console.log(params); 
     });
     router.otherwise(function (){
