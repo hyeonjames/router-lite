@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../dist/router-lite.js">
+    </script>
+    <script type="text/javascript">
+        var router = new routerLite();
+        router.on('/test', function (){
+            console.log('test');
+        })
+        .on('/optional/:opt?', function (obj){
+            console.log(obj);
+        })
+        .on('/param/:test', function (obj){
+            console.log(obj);
+        })
+        router.resolve('/test');
+        router.resolve('/optional/zzz');
+        router.resolve('/param/zzzzz');
+    </script>
+</head>
+</html>
