@@ -15,8 +15,9 @@ npm install router-lite
 using browser
 ----------
 Download
-    https://github.com/tmdgus0118/router-lite/master/dist/router-lite.js
-or  https://github.com/tmdgus0118/router-lite/master/dist/router-lite.min.js
+https://raw.githubusercontent.com/tmdgus0118/router-lite/master/dist/router-lite.js
+https://raw.githubusercontent.com/tmdgus0118/router-lite/master/dist/router-lite.min.js
+
 ----------
 
 # Usage
