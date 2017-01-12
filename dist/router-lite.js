@@ -96,7 +96,7 @@ module.exports = function () {
         _classCallCheck(this, Router);
 
         this.$patterns = [];
-        this.$otherwise = null;
+        this.$otherwise = [];
     }
 
     _createClass(Router, [{
@@ -111,7 +111,7 @@ module.exports = function () {
     }, {
         key: 'otherwise',
         value: function otherwise(fn) {
-            this.$otherwise = fn;
+            this.$otherwise.push(fn);
             return this;
         }
     }, {
@@ -148,8 +148,31 @@ module.exports = function () {
                 }
             }
 
-            if (otherwise && this.$otherwise) {
-                this.$otherwise();
+            if (otherwise) {
+                var _iteratorNormalCompletion3 = true;
+                var _didIteratorError3 = false;
+                var _iteratorError3 = undefined;
+
+                try {
+                    for (var _iterator3 = this.$otherwise[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+                        var o = _step3.value;
+
+                        o();
+                    }
+                } catch (err) {
+                    _didIteratorError3 = true;
+                    _iteratorError3 = err;
+                } finally {
+                    try {
+                        if (!_iteratorNormalCompletion3 && _iterator3.return) {
+                            _iterator3.return();
+                        }
+                    } finally {
+                        if (_didIteratorError3) {
+                            throw _iteratorError3;
+                        }
+                    }
+                }
             }
             return this;
         }

@@ -14,9 +14,16 @@
         .on('/param/:test', function (obj){
             console.log(obj);
         })
+        .otherwise(function (){
+            console.log('otherwise 1');
+        })
+        .otherwise(function (){
+            console.log('otherwise 2');
+        })
         router.resolve('/test');
         router.resolve('/optional/zzz');
         router.resolve('/param/zzzzz');
+        router.resolve('/otherwise_test');
     </script>
 </head>
 </html>

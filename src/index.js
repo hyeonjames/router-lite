@@ -54,7 +54,7 @@ function compile(pt){
 module.exports = class Router{
     constructor(){
         this.$patterns = [];
-        this.$otherwise = null;
+        this.$otherwise = [];
     }
 
     on ( a, fn ) {
@@ -65,7 +65,7 @@ module.exports = class Router{
         return this;
     }
     otherwise ( fn ) {
-        this.$otherwise = fn;
+        this.$otherwise.push(fn);
         return this;
     }
     resolve( url ){
@@ -78,8 +78,10 @@ module.exports = class Router{
                 otherwise = false;
             }
         }
-        if(otherwise  && this.$otherwise){
-            this.$otherwise();
+        if(otherwise){
+            for(let o of this.$otherwise) {
+                o();
+            }
         }
         return this;
     }
